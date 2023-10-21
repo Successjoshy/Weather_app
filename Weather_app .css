@@ -1,0 +1,143 @@
+body{
+    background: rgb(5, 5, 119);
+    color: white;
+    
+}
+                            /* container style  */
+.head-container{
+    padding: 15px;
+}
+                            /* images style  */
+ img{
+    width: 100px;
+    height: 100px;
+    border-radius:4px ;
+}
+                            /*form-container style  */
+form{
+    width: 100%;
+}
+
+form button img{
+    height:1.75rem ;
+    width:1.75rem ;
+    border: none;
+    border-radius:4px ; ;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+form button{
+    height:2.85rem ;
+    width:2.85rem ;
+    background: rgb(255, 234, 0);
+
+}
+                            /* form inputs style  */
+.inputs-sections{
+    display: flex;
+    gap: .5rem;
+    border-radius:4px ;
+}
+
+input{
+    border-radius: 5px;;
+    border: none ;
+    height:2.75rem ;
+    width: 80%;
+    background: rgb(95, 87, 87);
+    color: #dcd7d7;
+    font-size: larger;
+    padding: 0 0 0 5px ;
+}
+
+/* input [type = " text"]{
+    height: 2.75rem;
+    color: aliceblue;
+    background-color: white;
+} */
+
+ input::placeholder{
+    color: rgb(185, 176, 176);
+    font-size: large;   
+} 
+
+.msg{
+    margin: 0;
+    padding: .5rem 1rem;
+    background-color:rgb(119, 111, 111) ;
+    transform: translate3d(0,-100%,0);
+    width: 70%;
+    z-index: -1;
+    position: relative;
+    border-radius: 3px;
+    transition: .5s;
+}
+                            /* this will be the classList added style  */
+.msg .visible{
+    transform: translate(0,0,0);
+    opacity: 1;
+}
+                            /* cities or country styles  */
+.cities{
+    display: grid;
+    padding: 0;
+    list-style: none;
+    gap: 2rem;
+    margin: 0 0 4rem;
+}
+
+.cities li{
+    display: flex;
+    gap: .5rem;
+    background-color: #fff;
+    align-items: center;
+    color: rgba(30, 29, 29, 0.782);
+    box-shadow: 5px 5px  5px  rgb(233, 228, 218);
+    /* width: 75%; */
+}
+
+
+.city-conditions{
+    color: black;
+}
+
+.city-country{
+    color: #fff;
+    background: rgb(13, 254, 186);
+    padding: .12rem;
+    margin-left: .3rem;
+}
+
+a{
+    color: goldenrod;
+}
+
+
+
+                            /* media queries for small scrren mobile-view */
+
+
+@media (min-width:560px) {
+    .cities{
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)) ;
+    }
+    .cities li{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+                            /* media queries for medium scrren tablet-view  */
+
+@media (min-width:760px) {
+    .notification{
+        padding: .5rem 4rem;
+        
+    }
+    .head-container{
+        padding: 4rem;
+    }
+}
