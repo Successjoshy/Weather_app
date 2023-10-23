@@ -12,12 +12,11 @@ form.addEventListener("submit", (e) =>{
     e.preventDefault()
 
     msg.textContent = " "
-    // msg.classList.remove("visible")
+    msg.classList.remove("visible")
     let inputval = input.value
 
     const listItemsArray= Array.from(list.querySelectorAll(".cities li"))
 
-    //   console.log(listItemsArray)
    
     if(listItemsArray.length > 0){
  
@@ -26,7 +25,7 @@ form.addEventListener("submit", (e) =>{
             let cityName = el.querySelector(".city-name").textContent.toLowerCase()
             let cityCountry = el.querySelector(".city-country").textContent.toUpperCase()
 
-            // console.log(cityName)
+
 
             if(inputval.includes(',')){
             
@@ -58,7 +57,7 @@ form.addEventListener("submit", (e) =>{
 
              msg.classList.add("visible")
 
-            //  form.reset()
+             form.reset()
              input.focus()
 
              return
@@ -67,18 +66,6 @@ form.addEventListener("submit", (e) =>{
 
 
                                      // AJAX MAGIC
-
-     //`http://api.openweathermap.org/data/2.5/forecast?id=524901&appid=${apiKey}`
-     
-                                                                                                        
-                                                                                                        //  `http://api.openweathermap.org/data/2.5/weather?q=${inputval}&appid=${apiKey}&units=metric`
-                                                                                                        
-                                                                                                        //'http://api.openweathermap.org/data/2.5/weather?q=${inputval}&appid=${apiKey}&units=metric'        //"https:api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid=${apiKey} " //"https:weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/New%20York%20City%2CNY?unitGroup=us&key=apiKeycontentType=json"
-                                                                                                        
-                                                                                                        //  ('api.openweathermap.org/data/2.5/weather?q=London&appid=3f071776be6f7ccd417bfb1da2910---')
-
-                                                                                                        //  'http://api.openweathermap.org/data/2.5/forecast?lat=51.5072&lon=0.1275&units=metric'
-                                                                                                    
 
      const url =  `http://api.openweathermap.org/data/2.5/weather?q=${inputval}&appid=${apiKey}&units=metric`                                                                                       
 
