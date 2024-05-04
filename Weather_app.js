@@ -84,9 +84,9 @@ form.addEventListener("submit", (e) =>{
 
             // console.log(weather)
 
-            const icon = `img/weather/${weather[0]['icon']}.svg`;
+            const icon = `weather-images/weather/${weather[0]['icon']}.png`;
 
-            console.log(icon)
+            // console.log(icon)
 
             const li = document.createElement("li")
 
